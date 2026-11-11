@@ -1,4 +1,3 @@
-
 # NetworkWalks Cybersecurity Internship – Week 2
 
 ### Reconnaissance, Footprinting & Network Scanning
