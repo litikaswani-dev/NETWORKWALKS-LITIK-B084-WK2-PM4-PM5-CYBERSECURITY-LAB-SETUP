@@ -1,6 +1,7 @@
+
 # NetworkWalks Cybersecurity Internship – Week 2
 
-### Reconnaissance, Footprinting & Network Scanning
+## Reconnaissance, Footprinting & Network Scanning
 
 **Intern:** Litik Aswani  
 **Batch:** B084  
@@ -11,64 +12,64 @@
 
 ## About This Repository
 
-This repository documents the practical tasks completed during Week 2 of my Cybersecurity Internship at NetworkWalks.
+This repository documents the practical activities completed during Week 2 of my NetworkWalks Cybersecurity Internship.
 
-The activities focused on two important phases of cybersecurity assessment:
+The week focused on two cybersecurity assessment activities:
 
-- **Reconnaissance & Footprinting** using theHarvester
-- **Network Scanning & Discovery** using Zenmap (Nmap)
+- **PM4:** Passive Reconnaissance and Footprinting using theHarvester
+- **PM5:** Network Scanning and Host Discovery using Zenmap (Nmap)
 
-The repository contains separate documentation for each module, practical screenshots, scan findings, and a final penetration testing report.
+It includes module documentation, screenshots, observations, and a complete penetration testing report.
 
-## Modules Completed
+## Completed Modules
 
 ### PM4 – Footprinting Using theHarvester
 
-**Environment:** Kali Linux (VirtualBox)  
+**Platform:** Kali Linux (VirtualBox)  
 **Tool:** theHarvester 4.11.1  
-**Target:** microsoft.com
+**Target:** `microsoft.com`
 
-Performed passive reconnaissance using Baidu and multiple supported data sources to gather publicly available information.
-
-**Key Findings:**
+Performed passive reconnaissance using Baidu and multiple supported data sources.
 
 | Finding | Result |
 |---|---:|
-| Baidu Search Results | 0 |
-| IP Addresses | 111 |
-| Email Addresses | 3 |
-| Host Entries | 9,488 |
+| Baidu results | 0 |
+| IP addresses | 111 |
+| Email addresses | 3 |
+| Host entries | 9,488 |
+| People | 0 |
 
-Some data sources required API keys, which limited the completeness of the scan.
+**Evidence:**
 
-[View PM4 Documentation & Screenshots](PM4-theHarvester/README.md)
+![theHarvester Results](PM4-theHarvester/screenshots/PM4_Task2_IPs.png)
+
+[View PM4 Documentation](PM4-theHarvester/README.md)
 
 ---
 
 ### PM5 – Network Scanning Using Zenmap
 
-**Environment:** Windows 11  
+**Platform:** Windows 11  
 **Tool:** Zenmap / Nmap 7.99.3  
-**Scan Type:** Ping Scan
+**Scan:** Ping Scan
 
-Performed host discovery on an authorized local network and generated a network topology diagram.
-
-**Key Findings:**
+Performed host discovery on an authorized local network and generated a topology diagram.
 
 | Metric | Result |
 |---|---:|
-| IP Addresses Scanned | 256 |
-| Active Hosts Discovered | 5 |
-| Scan Duration | 4.81 seconds |
-| Scan Profile | Ping Scan |
+| IP addresses scanned | 256 |
+| Active hosts | 5 |
+| Scan duration | 4.81 seconds |
 
-The scan helped identify responsive hosts and visualize the local network structure.
+**Evidence:**
 
-[View PM5 Documentation & Screenshots](PM5-Zenmap/README.md)
+![Zenmap Scan Results](PM5-Zenmap/screenshots/PM5_03_Ping_Scan_Results.png)
+
+[View PM5 Documentation](PM5-Zenmap/README.md)
 
 ---
 
-## Tools & Technologies
+## Tools and Technologies
 
 | Tool | Purpose |
 |---|---|
@@ -77,20 +78,16 @@ The scan helped identify responsive hosts and visualize the local network struct
 | theHarvester | Passive reconnaissance |
 | Windows Command Prompt | Network configuration |
 | Zenmap | Graphical network scanning |
-| Nmap | Network host discovery |
+| Nmap | Host discovery |
 | GitHub | Documentation and version control |
 | Markdown | Technical reporting |
-
----
 
 ## Repository Structure
 
 ```text
-NetworkWalks-Week2/
-│
+.
 ├── README.md
 ├── REPORT.md
-│
 ├── PM4-theHarvester/
 │   ├── README.md
 │   └── screenshots/
@@ -99,73 +96,58 @@ NetworkWalks-Week2/
 │       ├── PM4_Task2_API_Warnings.png
 │       ├── PM4_Task2_IPs.png
 │       └── PM4_Task2_Emails_and_Hosts.png
-│
 └── PM5-Zenmap/
     ├── README.md
-    ├── screenshots/
-    │   ├── PM5_01_IP_Configuration.png
-    │   ├── PM5_02_Zenmap_Configuration.png
-    │   ├── PM5_03_Ping_Scan_Results.png
-    │   └── PM5_04_Network_Topology.png
-    │
-    └── PM5_04_Network_Topology.pdf
+    ├── PM5_04_Network_Topology.pdf
+    └── screenshots/
+        ├── PM5_01_IP_Configuration.png
+        ├── PM5_02_Zenmap_Configuration.png
+        ├── PM5_03_Ping_Scan_Results.png
+        └── PM5_04_Network_Topology.png
 ```
 
----
+## Final Report
 
-## Final Penetration Testing Report
+The complete report covers:
 
-The complete Week 2 report includes:
+1. Liability Disclaimer
+2. Introduction
+3. Tools Used
+4. Activities Performed
+5. Risk Analysis / Impact
+6. Recommendations
+7. Conclusion
+8. Evidence Collected
 
-- Liability disclaimer
-- Introduction and objectives
-- Tools and technologies
-- Practical activities and commands
-- Scan results and observations
-- Risk analysis and potential impact
-- Security recommendations
-- Conclusion and evidence
-
-### [View Full Week 2 Report](REPORT.md)
-
----
+**[View Complete Week 2 Penetration Testing Report](REPORT.md)**
 
 ## Key Learnings
 
-Through these activities, I gained practical experience in:
+- Performing passive reconnaissance using publicly indexed sources
+- Executing theHarvester commands in Kali Linux
+- Understanding reconnaissance results and API limitations
+- Identifying local network configurations
+- Performing host discovery using Zenmap and Nmap
+- Generating and interpreting network topology diagrams
+- Documenting security observations
+- Protecting sensitive information in public reports
 
-- Performing passive reconnaissance using publicly available sources.
-- Using theHarvester for domain-based information gathering.
-- Understanding API key requirements and reconnaissance limitations.
-- Identifying local network configurations.
-- Performing host discovery using Zenmap and Nmap.
-- Interpreting network scanning results.
-- Generating network topology diagrams.
-- Documenting findings in a structured cybersecurity report.
-- Protecting sensitive information when publishing evidence.
+## Ethical Disclaimer
 
-## Ethical & Security Disclaimer
+All activities were performed for educational purposes.
 
-All activities documented in this repository were performed for educational purposes as part of the NetworkWalks Cybersecurity Internship.
+Reconnaissance involved publicly available information, and network scanning was limited to an owned or authorized local network.
 
-Reconnaissance was limited to publicly available information, and network scanning was performed on an owned or authorized local network.
+No unauthorized access, exploitation, or credential attacks were performed.
 
-No unauthorized access, exploitation, password attacks, or vulnerability exploitation was conducted.
-
-Sensitive network identifiers should be redacted from publicly shared evidence.
-
-The findings represent observations from the tools used and do not establish confirmed security vulnerabilities.
+Tool findings do not automatically indicate confirmed vulnerabilities.
 
 ---
 
 ## Acknowledgment
 
-I would like to thank **NetworkWalks** for providing this opportunity to gain practical cybersecurity experience through hands-on assignments.
+I would like to thank **NetworkWalks** for the opportunity to develop practical skills through cybersecurity exercises.
 
-These exercises helped strengthen my understanding of reconnaissance, network discovery, ethical security practices, and technical documentation.
-
----
-
-**NetworkWalks Cybersecurity Internship**  
-**Week 2 – Practical Project Submission**  
-**Prepared by Litik Aswani | Batch B084**
+**Prepared by:** Litik Aswani  
+**Batch:** B084  
+**Week:** 2
