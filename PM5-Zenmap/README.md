@@ -12,38 +12,41 @@
 
 ## 1. Objective
 
-The objective of this module was to identify active devices on an authorized local network using Zenmap.
+The objective was to discover active devices on an authorized local network using Zenmap.
 
-The exercise involved identifying the local network configuration, performing host discovery, and generating a network topology diagram.
+The exercise involved:
+
+- Identifying the local network configuration
+- Performing host discovery
+- Reviewing scan results
+- Generating a network topology visualization
 
 ## 2. Tools Used
 
 - Windows 11
-- Windows Command Prompt
+- Command Prompt
 - Zenmap
 - Nmap 7.99.3
 
 ## 3. Identifying the Local Network
 
-The following command was executed in Windows Command Prompt:
+The following command was executed:
 
 ```cmd
 ipconfig
 ```
 
-The command displayed the IPv4 address, subnet mask, and default gateway.
+This displayed the IPv4 address, subnet mask, and default gateway.
 
-### Network Information
+### Network Configuration
 
 | Parameter | Value |
 |---|---|
-| Network Range | 192.168.0.0/24 |
+| Network | 192.168.0.0/24 |
 | Subnet Mask | 255.255.255.0 |
-| Network Type | Private Local Area Network |
+| Network Type | Private LAN |
 
-The scan was limited to the local network within the authorized scope.
-
-### Screenshot – Network Configuration
+### Screenshot – IP Configuration
 
 ![IP Configuration](screenshots/PM5_01_IP_Configuration.png)
 
@@ -51,17 +54,16 @@ The scan was limited to the local network within the authorized scope.
 
 Zenmap was configured with the following settings:
 
-**Target:** `192.168.0.0/24`
-
+**Target:** `192.168.0.0/24`  
 **Profile:** Ping scan
 
-**Command:**
+### Command
 
 ```bash
 nmap -sn 192.168.0.0/24
 ```
 
-The `-sn` option enables host discovery without performing a port scan.
+The `-sn` option performs host discovery without a port scan.
 
 ### Screenshot – Zenmap Configuration
 
@@ -69,21 +71,19 @@ The `-sn` option enables host discovery without performing a port scan.
 
 ## 5. Performing the Network Scan
 
-After configuring the target and scan profile, the scan was executed using Zenmap.
+The ping scan was executed against the local network.
 
 ### Scan Results
 
 | Metric | Result |
 |---|---|
-| IP Addresses Scanned | 256 |
-| Active Hosts Discovered | 5 |
-| Scan Duration | 4.81 seconds |
-| Scan Type | Ping Scan |
-| Nmap Version | 7.99.3 |
+| IP addresses scanned | 256 |
+| Active hosts | 5 |
+| Scan duration | 4.81 seconds |
+| Scan type | Ping scan |
+| Nmap version | 7.99.3 |
 
-The scan identified five hosts responding on the local network.
-
-These results represent the network state observed during the scan and may change as devices connect or disconnect.
+Five hosts were reported as active during the scan.
 
 ### Screenshot – Ping Scan Results
 
@@ -91,47 +91,44 @@ These results represent the network state observed during the scan and may chang
 
 ## 6. Network Topology
 
-After the scan completed, the Topology tab in Zenmap was used to visualize the discovered network hosts.
+After completing the scan, the Topology tab in Zenmap was used to visualize discovered devices.
 
-The topology diagram displayed the discovered devices and their relationship to the scanning machine.
+The resulting diagram represented the discovered hosts in relation to the scanning machine.
 
 ### Screenshot – Network Topology
 
 ![Network Topology](screenshots/PM5_04_Network_Topology.png)
 
-### Exported Topology PDF
+### Exported Topology
 
-[View Redacted Network Topology PDF](PM5_04_Network_Topology.pdf)
-
-The submission evidence has been redacted to protect device identifiers and private network information.
+[View Network Topology PDF](PM5_04_Network_Topology.pdf)
 
 ## 7. Observations
 
 1. Zenmap provides a graphical interface for Nmap.
-2. The ping scan helped identify responsive devices on the local network.
-3. Five active hosts were reported during the scan.
-4. Network topology visualization made the discovered devices easier to understand.
-5. Host discovery does not establish whether a device contains security vulnerabilities.
-6. Private network information should be protected when publishing cybersecurity reports.
+2. The ping scan identified five responsive hosts.
+3. Host-discovery results represent the network state at the time of scanning.
+4. The Topology tab helped visualize the discovered devices.
+5. Host discovery alone does not confirm security vulnerabilities.
 
-## 8. Security and Privacy Considerations
+## 8. Security Considerations
 
-The scan was limited to an owned or authorized local network.
-
-MAC addresses and identifying network information were redacted from publicly shared screenshots and the topology PDF.
-
-No unauthorized port scanning, exploitation, or credential attacks were performed.
+- The scan was restricted to an owned or authorized local network.
+- No exploitation or credential attacks were performed.
+- Private network identifiers should be redacted before public sharing.
+- Further testing requires appropriate permission.
 
 ## 9. Conclusion
 
-This module provided practical experience in local network discovery using Zenmap.
+This module provided practical experience using Zenmap for network discovery.
 
-I learned how to identify network settings, configure an Nmap ping scan, interpret host-discovery results, and visualize network topology.
+I learned how to identify local network settings, configure a ping scan, interpret results, and visualize network topology.
 
-The exercise demonstrated the importance of understanding network structure during the initial stages of a cybersecurity assessment.
+These skills are useful during the initial discovery stages of cybersecurity assessments.
 
 ---
 
 **Module:** W2-PM5  
-**Status:** Completed  
-**Internship:** NetworkWalks Cybersecurity Internship
+**Status:** Completed
+
+[Back to Main Repository](../README.md)
